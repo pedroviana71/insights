@@ -1,0 +1,22 @@
+.headerMini {
+    padding-top: 28px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    margin-left: 16px;
+}
+
+.profilePicture {
+    width: 56px;
+    border-radius: 50%;
+}
+
+.addButton {
+    margin: 0px 16px;
+    color: #ED4D77;
+    font-size: 24px;
+}

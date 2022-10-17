@@ -1,0 +1,25 @@
+.feedContainer {
+    background-color: rgb(244, 244, 244);
+    text-align: center;
+}
+
+.cardItem {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    border-radius: 8px;
+    margin: 8px 16px;
+    padding: 8pxx;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.description {
+    padding: 16px;
+    text-align: center;
+}
+
+.tag {
+    border: 1px solid rgba(237, 77, 120, 0.24);
+    border-radius: 4px;
+    padding-bottom: 16px;
+}
