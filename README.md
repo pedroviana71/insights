@@ -7,7 +7,7 @@ carregar mais insights.
 
 Features implementadas:
 
-- Responsividade para telas de tamanhos diferentes (apesar de não existir desenho de outras telas)
+- É mostrado 3 insights quando carrega a home
 - O usuário pode clicar para carregar mais insights
 - Ao deletar a ultima letra no "pesquisar", todos os dados são mostrados novamente.
 - O botao fica desativado se nao existir texto no insight a ser criado
@@ -18,6 +18,7 @@ Decisões sobre o projeto:
 - Decidi usar css por ser um projeto de tamanho pequeno
 - Também decidi não usar Redux por ser um projeto pequeno pois consegui lidar com os estados de forma controlada
 - Criei um componente Home para facilitar o controle de estados entre os componentes
+- Responsividade para telas de tamanhos diferentes
 - Utilizado o ES6
 
 ## Instalação
