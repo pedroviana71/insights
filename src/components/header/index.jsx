@@ -16,7 +16,7 @@ const Header = ({ handleCreateInsight }) => {
         <div className={styles.profileEmail}>{email}</div>
       </div>
       <div className={styles.separator} />
-      <div className={styles.title}>Feed de Insights</div>
+      <h1 className={styles.title}>Feed de Insights</h1>
     </div>
   );
 };
