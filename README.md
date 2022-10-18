@@ -57,8 +57,6 @@ ou
 
 ## Screenshots
 
-- Página principal:
-  ![image](https://user-images.githubusercontent.com/86496233/196432103-1cd19431-592c-4bb2-8f34-7137aba3c2ed.png)
+![image](https://user-images.githubusercontent.com/86496233/196432103-1cd19431-592c-4bb2-8f34-7137aba3c2ed.png)
 
-- Página de adicionar insight
-  ![image](https://user-images.githubusercontent.com/86496233/196432322-fabf40a1-dd2a-4eb6-878d-37061ee92db4.png)
+![image](https://user-images.githubusercontent.com/86496233/196432322-fabf40a1-dd2a-4eb6-878d-37061ee92db4.png)
