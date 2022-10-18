@@ -13,10 +13,37 @@
 .profilePicture {
     width: 56px;
     border-radius: 50%;
+    border: 2px solid #ED4D77;
 }
 
 .addButton {
     margin: 0px 16px;
     color: #ED4D77;
     font-size: 24px;
+}
+
+@media screen and (min-width: 768px) {
+    .headerMini {
+        padding-top: 28px;
+        width: 768px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .logo {
+        margin-left: 16px;
+    }
+
+    .profilePicture {
+        width: 56px;
+        border-radius: 50%;
+    }
+
+    .addButton {
+        margin: 0px 16px;
+        color: #ED4D77;
+        font-size: 24px;
+    }
+
 }
