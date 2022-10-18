@@ -1,70 +1,63 @@
-# Getting Started with Create React App
+# Insight em React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Feito uma aplicativo que consome dados mockados. Foi seguido
+o Sketch disponibilizado e criada funções como adicionar novos
+insights, filtras os insights existentes por tag ou descrição e
+carregar mais insights.
 
-## Available Scripts
+Features implementadas:
 
-In the project directory, you can run:
+- Responsividade para telas de tamanhos diferentes (apesar de não existir desenho de outras telas)
+- O usuário pode clicar para carregar mais insights
+- Ao deletar a ultima letra no "pesquisar", todos os dados são mostrados novamente.
+- O botao fica desativado se nao existir texto no insight a ser criado
 
-### `npm start`
+Decisões sobre o projeto:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Como não tinha no Sketch a regra para separar novas categorias quando criando um insight, decidi por não criar uma "div" em volta da palavra com a cor rosa
+- Decidi usar css por ser um projeto de tamanho pequeno
+- Também decidi não usar Redux por ser um projeto pequeno pois consegui lidar com os estados de forma controlada
+- Criei um componente Home para facilitar o controle de estados entre os componentes
+- Utilizado o ES6
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Instalação
 
-### `npm test`
+Se voce utilizar npm:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```bash
+  npm install
+  npm start
+```
 
-### `npm run build`
+ou se voce utilizar yarn:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+  yarn
+  yarn start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Rodando os testes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Para rodar os testes, rode o seguinte comando
 
-### `npm run eject`
+```bash
+  npm test
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+ou
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
+  yarn test
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Pacotes utilizados
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Clsx (para usar css condicionalmente)
 
-## Learn More
+## Screenshots
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Página principal:
+  ![image](https://user-images.githubusercontent.com/86496233/196432103-1cd19431-592c-4bb2-8f34-7137aba3c2ed.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Página de adicionar insight
+  ![image](https://user-images.githubusercontent.com/86496233/196432322-fabf40a1-dd2a-4eb6-878d-37061ee92db4.png)
