@@ -1,14 +1,14 @@
 import { useState } from "react";
-import mockInsights from "../../data/mockInsights";
 import styles from "./index.module.css";
 import ShowMore from "./showMore";
-import { MdSearch } from "react-icons/md";
+import Search from "./search";
 
-const Feed = () => {
+const Feed = ({ mockInsights }) => {
   const [showPerTime, setShowPerTime] = useState(3);
   const [data, setData] = useState(mockInsights);
   const [textInput, setTextInput] = useState("");
   const [searchParam] = useState(["description", "tag"]);
+  const [showModal, setShowModal] = useState(false);
 
   const handleShowMore = () => {
     setShowPerTime(showPerTime + 3);
@@ -20,8 +20,9 @@ const Feed = () => {
   };
 
   const handleDelete = (e) => {
-    if (e.key === "Backspace") {
+    if (e.key === "Backspace" && textInput.length === 1) {
       setData(mockInsights);
+      setShowPerTime(3);
     }
   };
 
@@ -41,7 +42,8 @@ const Feed = () => {
 
   return (
     <div className={styles.feedContainer}>
-      {data.slice(0, showPerTime).map((insight) => {
+      {showModal && <div className={styles.modal}></div>}
+      {data?.slice(0, showPerTime).map((insight) => {
         return (
           <div className={styles.cardItem} key={insight.id}>
             <p className={styles.description}>{insight.description}</p>
@@ -49,15 +51,14 @@ const Feed = () => {
           </div>
         );
       })}
-      {showPerTime < mockInsights.length ? (
+      {showPerTime < mockInsights?.length ? (
         <ShowMore handleShowMore={handleShowMore} />
       ) : null}
-      <div className={styles.search}>
-        <input type="text" onChange={handleChange} onKeyDown={handleDelete} />
-        <button className={styles.searchButton} onClick={handleSearch}>
-          <MdSearch className={styles.iconSearch} />
-        </button>
-      </div>
+      <Search
+        handleChange={handleChange}
+        handleDelete={handleDelete}
+        handleSearch={handleSearch}
+      />
     </div>
   );
 };

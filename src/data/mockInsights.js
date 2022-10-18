@@ -2,7 +2,7 @@ const mockInsights = [
   {
     id: 1,
     description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-    tag: "Temporada",
+    tag: "",
   },
   {
     id: 2,
