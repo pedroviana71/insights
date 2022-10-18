@@ -9,7 +9,7 @@ const HeaderMini = ({ profilePicture, handleCreateInsight, type }) => {
         className={styles.headerMiniCreateInsight}
         onClick={handleCreateInsight}
       >
-        <MdArrowBack />
+        <MdArrowBack className={styles.iconReturn} />
         <div>
           <p>CRIAR</p>
           <p>INSIGHT</p>

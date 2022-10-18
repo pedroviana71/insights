@@ -3,25 +3,35 @@ import mockInsights from "../../data/mockInsights";
 import Feed from "../feed";
 import Header from "../header";
 import styles from "./index.module.css";
-import HeaderMini from "../header/headerMini";
+import CreateInsight from "../feed/createInsight";
 
 const Home = () => {
   const [data, setData] = useState(mockInsights);
   const [description, setDescription] = useState("");
   const [tag, setTag] = useState("");
+  const [countDescription, setCountDescription] = useState(400);
   const [showCreateInsight, setShowCreateInsight] = useState(false);
 
   const addInsight = () => {
     if (description) {
       setData([
-        ...data,
         {
           id: data.length + 1,
           description,
           tag,
         },
+        ...data,
       ]);
     }
+  };
+
+  const handleDescription = (e) => {
+    setCountDescription(400 - e.target.value.length);
+    setDescription(e.target.value);
+  };
+
+  const handleTag = (e) => {
+    setTag(e.target.value);
   };
 
   const handleCreateInsight = () => {
@@ -31,30 +41,16 @@ const Home = () => {
   return (
     <div className={styles.home}>
       {showCreateInsight ? (
-        <div className={styles.insightContainer}>
-          <HeaderMini
-            handleCreateInsight={handleCreateInsight}
-            type="CREATE_INSIGHT"
-          />
-          <div className={styles.inputContainer}>
-            <div>
-              <div>insight</div>
-              <input type="text" />
-              <p>limite de caracteres</p>
-            </div>
-            <div>
-              <div>categoria</div>
-              <input type="text" />
-            </div>
-          </div>
-        </div>
+        <CreateInsight
+          handleCreateInsight={handleCreateInsight}
+          handleDescription={handleDescription}
+          handleTag={handleTag}
+          addInsight={addInsight}
+          countDescription={countDescription}
+        />
       ) : null}
       <Header handleCreateInsight={handleCreateInsight} />
-      <Feed
-        mockInsights={data}
-        setDescription={setDescription}
-        setTag={setTag}
-      />
+      <Feed mockInsights={data} />
     </div>
   );
 };

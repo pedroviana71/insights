@@ -1,13 +1,17 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import styles from "./index.module.css";
 import ShowMore from "./showMore";
 import Search from "./search";
 
-const Feed = ({ mockInsights, setDescription, setTag }) => {
+const Feed = ({ mockInsights }) => {
   const [showPerTime, setShowPerTime] = useState(3);
   const [data, setData] = useState(mockInsights);
   const [textInput, setTextInput] = useState("");
   const [searchParam] = useState(["description", "tag"]);
+
+  useEffect(() => {
+    setData(mockInsights);
+  }, [mockInsights, setData]);
 
   const handleShowMore = () => {
     setShowPerTime(showPerTime + 3);
