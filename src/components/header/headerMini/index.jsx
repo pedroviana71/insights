@@ -10,10 +10,11 @@ const HeaderMini = ({ profilePicture, handleCreateInsight, type }) => {
         onClick={handleCreateInsight}
       >
         <MdArrowBack className={styles.iconReturn} />
-        <div>
+        <div className={styles.title}>
           <p>CRIAR</p>
-          <p>INSIGHT</p>
+          <p className={styles.titleInsight}>INSIGHT</p>
         </div>
+        <div />
       </div>
     );
   } else {

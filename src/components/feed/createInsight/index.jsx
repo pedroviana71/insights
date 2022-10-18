@@ -1,5 +1,6 @@
 import HeaderMini from "../../header/headerMini";
 import styles from "./index.module.css";
+import clsx from "clsx";
 
 const CreateInsight = ({
   handleDescription,
@@ -7,6 +8,7 @@ const CreateInsight = ({
   addInsight,
   handleCreateInsight,
   countDescription,
+  description,
 }) => {
   return (
     <div className={styles.insightContainer}>
@@ -35,7 +37,16 @@ const CreateInsight = ({
             placeholder="Adicione uma categoria (opcional)..."
           />
         </div>
-        <button onClick={addInsight}>add</button>
+        <button
+          onClick={addInsight}
+          className={clsx(
+            description
+              ? styles.addInsightButton
+              : styles.addInsightButtonDesabled
+          )}
+        >
+          PUBLICAR
+        </button>
       </div>
     </div>
   );

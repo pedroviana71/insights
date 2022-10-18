@@ -22,6 +22,9 @@ const Home = () => {
         },
         ...data,
       ]);
+      setDescription("");
+      setTag("");
+      setShowCreateInsight(false);
     }
   };
 
@@ -47,6 +50,7 @@ const Home = () => {
           handleTag={handleTag}
           addInsight={addInsight}
           countDescription={countDescription}
+          description={description}
         />
       ) : null}
       <Header handleCreateInsight={handleCreateInsight} />

@@ -13,6 +13,26 @@
     justify-content: space-between;
     align-items: center;
     background-image: url('../../../assets/background.svg');
+    padding: 16px;
+}
+
+.iconReturn {
+    color: #ED4D77;
+    font-size: 24px;
+}
+
+.title {
+    font-size: 20px;
+    font-weight: 300;
+    font-style: italic;
+    color: #ED4D77;
+    text-align: center;
+    margin-right: 16px;
+}
+
+.titleInsight {
+    font-weight: 600;
+    font-style: normal;
 }
 
 .logo {
