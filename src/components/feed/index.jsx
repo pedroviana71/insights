@@ -3,12 +3,11 @@ import styles from "./index.module.css";
 import ShowMore from "./showMore";
 import Search from "./search";
 
-const Feed = ({ mockInsights }) => {
+const Feed = ({ mockInsights, setDescription, setTag }) => {
   const [showPerTime, setShowPerTime] = useState(3);
   const [data, setData] = useState(mockInsights);
   const [textInput, setTextInput] = useState("");
   const [searchParam] = useState(["description", "tag"]);
-  const [showModal, setShowModal] = useState(false);
 
   const handleShowMore = () => {
     setShowPerTime(showPerTime + 3);
@@ -42,7 +41,6 @@ const Feed = ({ mockInsights }) => {
 
   return (
     <div className={styles.feedContainer}>
-      {showModal && <div className={styles.modal}></div>}
       {data?.slice(0, showPerTime).map((insight) => {
         return (
           <div className={styles.cardItem} key={insight.id}>

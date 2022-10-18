@@ -6,6 +6,15 @@
     align-items: center;
 }
 
+.headerMiniCreateInsight {
+    padding-top: 28px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: url('../../../assets/background.svg');
+}
+
 .logo {
     margin-left: 16px;
 }

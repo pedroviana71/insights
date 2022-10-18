@@ -1,19 +1,36 @@
 import { ReactComponent as Logo } from "../../../assets/logo.svg";
-import { MdAdd } from "react-icons/md";
+import { MdAdd, MdArrowBack } from "react-icons/md";
 import styles from "./index.module.css";
 
-const HeaderMini = ({ profilePicture }) => {
-  return (
-    <div className={styles.headerMini}>
-      <Logo className={styles.logo} />
-      <img
-        className={styles.profilePicture}
-        alt="Foto de perfil"
-        src={profilePicture}
-      />
-      <MdAdd className={styles.addButton} />
-    </div>
-  );
+const HeaderMini = ({ profilePicture, handleCreateInsight, type }) => {
+  if (type === "CREATE_INSIGHT") {
+    return (
+      <div
+        className={styles.headerMiniCreateInsight}
+        onClick={handleCreateInsight}
+      >
+        <MdArrowBack />
+        <div>
+          <p>CRIAR</p>
+          <p>INSIGHT</p>
+        </div>
+      </div>
+    );
+  } else {
+    return (
+      <div className={styles.headerMini}>
+        <Logo className={styles.logo} />
+        <img
+          className={styles.profilePicture}
+          alt="Foto de perfil"
+          src={profilePicture}
+        />
+        <div onClick={handleCreateInsight}>
+          <MdAdd className={styles.addButton} />
+        </div>
+      </div>
+    );
+  }
 };
 
 export default HeaderMini;
