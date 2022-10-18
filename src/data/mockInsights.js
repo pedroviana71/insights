@@ -41,19 +41,19 @@ const mockInsights = [
   {
     id: 8,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quis hic impedit, voluptates eius modi debitis quam, ea eligendi tempore illo magni consequatur, cupiditate ducimus reprehenderit sapiente sit corrupti minimaapiente sit corrupti minima",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quis hic impedit, voluptates eius modi debitis quam, ea eligendi tempore illo magni consequatur, cupiditate ducimus reprehenderit sapiente sit corrupti minimaapiente sit corrupti minima oiii",
     tag: "Jogador",
   },
   {
     id: 9,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quis hic impedit, voluptates eius modi debitis quam, ea eligendi tempore illo magni consequatur, cupiditate ducimus reprehenderit sapiente sit corrupti minima!",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quis hic impedit, voluptates eius modi debitis quam, ea eligendi tempore illo magni consequatur, cupiditate ducimus reprehenderit sapiente sit corrupti minima! teste",
     tag: "Temporada",
   },
   {
     id: 10,
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quis hic",
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa quis hic pedro",
     tag: "Histórico",
   },
 ];
