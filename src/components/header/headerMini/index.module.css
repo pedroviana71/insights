@@ -60,6 +60,17 @@
         align-items: center;
     }
 
+    .headerMiniCreateInsight {
+        padding-top: 28px;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        background-image: url('../../../assets/background.svg');
+        padding: 16px;
+    }
+
+
+
     .logo {
         margin-left: 16px;
     }

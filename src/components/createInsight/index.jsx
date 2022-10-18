@@ -1,4 +1,4 @@
-import HeaderMini from "../../header/headerMini";
+import HeaderMini from "../header/headerMini";
 import styles from "./index.module.css";
 import clsx from "clsx";
 

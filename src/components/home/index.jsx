@@ -3,7 +3,7 @@ import mockInsights from "../../data/mockInsights";
 import Feed from "../feed";
 import Header from "../header";
 import styles from "./index.module.css";
-import CreateInsight from "../feed/createInsight";
+import CreateInsight from "../createInsight";
 
 const Home = () => {
   const [data, setData] = useState(mockInsights);
@@ -37,7 +37,7 @@ const Home = () => {
     setTag(e.target.value);
   };
 
-  const handleCreateInsight = () => {
+  const handleShowCreateInsight = () => {
     setShowCreateInsight(!showCreateInsight);
   };
 
@@ -45,7 +45,7 @@ const Home = () => {
     <div className={styles.home}>
       {showCreateInsight ? (
         <CreateInsight
-          handleCreateInsight={handleCreateInsight}
+          handleCreateInsight={handleShowCreateInsight}
           handleDescription={handleDescription}
           handleTag={handleTag}
           addInsight={addInsight}
@@ -53,7 +53,7 @@ const Home = () => {
           description={description}
         />
       ) : null}
-      <Header handleCreateInsight={handleCreateInsight} />
+      <Header handleCreateInsight={handleShowCreateInsight} />
       <Feed mockInsights={data} />
     </div>
   );

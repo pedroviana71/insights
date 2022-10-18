@@ -26,3 +26,34 @@
     color: rgba(102, 102, 102, 0.252);
     font-size: 24px;
 }
+
+@media screen and (min-width: 768px) {
+    .searchContainer {
+        display: flex;
+        width: 768px;
+        background-color: #FFFFFF;
+        border-radius: 8px;
+        margin: 16px 0px;
+        box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .input {
+        width: 100%;
+        border: none;
+        outline: none;
+        margin: 20px 16px;
+    }
+
+    .searchButton {
+        border: none;
+        outline: none;
+        margin: 20px 16px;
+        background-color: #FFFFFF;
+
+    }
+
+    .iconSearch {
+        color: rgba(102, 102, 102, 0.252);
+        font-size: 24px;
+    }
+}
